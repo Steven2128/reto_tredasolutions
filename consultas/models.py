@@ -27,4 +27,4 @@ class Consulta(models.Model):
         verbose_name_plural = "Consultas"
 
     def __str__(self):
-        return self.name
+        return str(self.pk)+' '+self.ciudad.nombre
