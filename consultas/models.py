@@ -17,7 +17,7 @@ class Ciudad(models.Model):
 class Consulta(models.Model):
     """Modelo Consulta"""
     ciudad = models.ForeignKey(Ciudad, verbose_name="Ciudad", on_delete=models.CASCADE)
-    hora_consulta = models.DateTimeField("Hora de consulta", auto_now=False, auto_now_add=True)
+    hora_consulta = models.CharField("Hora de consulta", max_length=150, null=False, blank=False)
     temperatura = models.FloatField("Temperatura ciudad", blank=False, null=False)
     humedad = models.PositiveIntegerField("Humedad de ciudad", blank=False, null=False)
     velocidad_viento = models.FloatField("Velocidad del viento", blank=False, null=False)
